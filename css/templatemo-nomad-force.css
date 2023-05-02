@@ -537,8 +537,8 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 /*---------------------------------------
@@ -672,8 +672,8 @@ strong {
   }
 
   .section-padding {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
   }
 
   .team-thumb {
@@ -695,6 +695,17 @@ strong {
   .news-detail-title {
     font-size: 36px;
   }
+
+  .heroText {
+    position: absolute;
+    z-index: 9;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 360px) {
@@ -705,6 +716,7 @@ strong {
   .heroText p {
     font-size: 14px;
   }
+
 }
 
 @media screen and (max-width: 359px) {
