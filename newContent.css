@@ -266,7 +266,12 @@
 
 }
 
-.desktop-hide,
 .mobile-hide {
+    width: 80%;
+    margin-top: 30px;
+}
+
+.desktop-hide
+{
   width: 100%;
 }
