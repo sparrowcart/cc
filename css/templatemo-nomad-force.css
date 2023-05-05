@@ -429,7 +429,7 @@ strong {
 
 .news,
 .related-news {
-  background: var(--section-bg-color);
+/*   background: var(--section-bg-color); */
 }
 
 .news-thumb {
