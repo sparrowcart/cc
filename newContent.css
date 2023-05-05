@@ -296,3 +296,13 @@
 {
   width: 100%;
 }
+
+
+.price-sec{
+  background-color: #000000;
+  background-image: radial-gradient(circle at left center, rgba(0, 156, 255, .35), #00042a 100%);
+padding-bottom: 60px!important;
+}
+.bullet-list li{
+  color: #ffffff;
+}
