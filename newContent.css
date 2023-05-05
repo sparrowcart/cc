@@ -306,3 +306,6 @@ padding-bottom: 60px!important;
 .bullet-list li{
   color: #ffffff;
 }
+.checked {
+  color: orange;
+}
