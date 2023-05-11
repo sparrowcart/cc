@@ -131,41 +131,188 @@ a {
   color: #000000;
   line-height: 35px;
 }
+
 .top-pricing-content {
-      font-size: 17px;
+  color: #ffffff !important;
+  position: relative;
+  z-index: 100;
+}
+
+/* ///////////// */
+
+/* Styles for mobile devices */
+
+@media only screen and (max-width: 767px) {
+  .top-nop {
+    padding: 0px 0 80px 0;
+  }
+  .btn_container {
+    margin-top: 50px;
+  }
+  .offbr {
+    position: relative;
+
+    top: 40px;
+    left: inherit;
+  }
+  .onbr {
+    position: relative;
+
+    /* margin: 0 0 40px 0; */
+    top: -7px;
+    left: inherit;
+  }
+  .bulb_btn {
+    font-family: "Baloo Bhai 2", serif;
+    width: 150px;
+    height: 50px;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    background: #2e83fd;
+
+    border-radius: 20px 20px 20px 21px;
+    font-size: 30px;
+  }
+  .bulb_btn:hover {
+    background: #46daff;
+  }
+  .price-headtag {
     color: #ffffff;
-    line-height: 35px;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 130px 0 0 0;
+  }
+  .fix-heading {
+    font-size: 42px;
+    color: #ffffff;
+    width: 100%;
+    line-height: 65px;
     text-align: center;
-    padding-right: 18vw;
-}
-  
 
-.top-pricing-content li {
-  text-decoration: none;
-  list-style-type: none;
-  font-size: 20px;
+    font-weight: 500;
+  }
+  .top-pricing-content li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+  }
+
+  .price-bg {
+    background: rgb(47, 133, 255);
+    background: radial-gradient(
+      circle,
+      rgba(47, 133, 255, 1) 0%,
+      rgba(22, 210, 248, 1) 88%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right right;
+    width: 100%;
+    height: 120vh;
+    padding: 1px;
+  }
+  /* .ovelay-price {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    margin: 40px 0 -10px 0;
+  } */
+
+  .top-content {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
-.price-bg {
+/* Styles for desktop devices */
 
-  background: url("images/pricebg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 110vh;
-padding: 0px 0 0px 0;
-}
-.ovelay-price{
-  background-color: rgba(0, 0, 0, 0.6);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 110vh;
-margin: 0px 0 0px 0;
-}
-.top-content {
-  text-align: center;
-  font-size: 16px;
+@media only screen and (min-width: 768px) {
+  .top-nop {
+    padding: 0px 0 0px 0;
+  }
+  .btn_container {
+    margin-top: 50px;
+  }
+  .offbr {
+    position: relative;
+
+    top: 40px;
+    left: inherit;
+  }
+  .onbr {
+    position: relative;
+
+    /* margin: 0 0 40px 0; */
+    top: -7px;
+    left: inherit;
+  }
+  .bulb_btn {
+    font-family: "Baloo Bhai 2", cursive;
+    width: 150px;
+    height: 50px;
+    border: 1px solid white;
+       outline: none;
+    cursor: pointer;
+
+    border-radius: 20px 20px 20px 21px;
+    background: #2e83fd;
+    font-size: 30px;
+  }
+  .bulb_btn:hover {
+    background: #46daff;
+  }
+  .price-headtag {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 130px 0 0 0;
+  }
+  .fix-heading {
+    font-size: 42px;
+    color: #ffffff;
+    width: 100%;
+    line-height: 65px;
+    text-align: center;
+    padding: 28% 0 0 0;
+    font-weight: 500;
+  }
+  .top-pricing-content li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+  }
+
+  .price-bg {
+    background: rgb(47, 133, 255);
+    background: radial-gradient(
+      circle,
+      rgba(47, 133, 255, 1) 40%,
+      rgba(22, 210, 248, 1) 88%
+    );
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right right;
+    width: 100%;
+    height: 90vh;
+    padding: 0px 0 0px 0;
+  }
+  /* .ovelay-price {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    margin: 40px 0 -10px 0;
+  } */
+
+  .top-content {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .pricingTable .pricingTable-signup {
