@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>ccc</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="price.css" />
+
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+      integrity="sha512-h5/L9lGjLnaoHUZcOtxf0XX4GKjwN/CFSt8PfR/2Q6/+ev9M9WqDbTnIdyJ1lHsgxU+NNrQo8rBcZz+aFmX9oA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-BTyK2jikJir3qA3lxZLM/u+0iBUsyHjE7OktgmeR0wLTFouevBJ97xk5S5N21ZiEGvgb1jKX9Q4Q4iVTEDdnTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"
+      integrity="sha512-ysHv6Q2vm6fX9/r8qTcT0v6wJ1rlFzAAr8rLcO+UmmCzhODhMlu9DT8DdqwYjGVwCY1JChzZ/qCfZQjnbZ+JlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      href="https://drive.google.com/uc?id=1lBZELNfutSJb5t8m7-cGWtRXpPI8jque"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="memo.css" />
+
+    <link rel="stylesheet" href="newContent.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link href="css/templatemo-nomad-force.css" rel="stylesheet" />
+    <link rel="icon" href="" type="image/x-icon" />
+
+    <style>
+      .box {
+        border: 2px solid black;
+        padding: 20px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      #form input,
+      textarea {
+        margin: 20px;
+        width: 80%;
+
+        border: 1px solid #3f4e4f;
+      }
+      #form input {
+        border: 1px solid #3f4e4f;
+        height: 30px;
+        padding: 10px;
+      }
+      .btn {
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+          <a class="navbar-brand" href="http://creativecodecorner.com/">
+            <!-- <strong>Creative Code Corner</strong> -->
+            <img src="logo.png" class="logo-1" alt="" srcset="" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon burge"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#hero">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#vision">Services</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#price">Pricing</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="box">
+          <form id="form" onsubmit="sendEmail(); return false;">
+            Name:
+            <input type="text" name="name" id="name" placeholder="Enter your name" /><br />
+            Contact:
+            <input type="number" name="contact" id="contact" placeholder="Enter your contact" /><br />
+            Email:
+            <input type="email" name="email" id="email" placeholder="Enter your email" /><br />
+            Message:
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter the message"></textarea>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+      
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      
+      <script>
+        function sendEmail() {
+          const name = document.getElementById("name").value;
+          const contact = document.getElementById("contact").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("msg").value;
+      
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "infosainibross@gmail.com",
+            Password: "511055F4C3B800165AB4A0B9AEACE8394FDC",
+            To: "sainikrishna434@gmail.com",
+            From: email,
+            Subject: "New Message from " + name,
+            Body: `Name: ${name}<br>Contact: ${contact}<br>Email: ${email}<br>Message: ${message}`,
+          }).then((message) => alert("Email sent successfully"));
+        }
+      </script>
+      
+    </main>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="bglogo1.png" class="logo-1" alt="" srcset="" />
+
+        <p class="footer-links">
+          <a href="https://creativecodecorner.com/" class="link-1">Home</a>
+
+          <a href="https://creativecodecorner.com/#portfolio">Portfolio</a>
+
+          <a href="https://creativecodecorner.com/prices">Pricing</a>
+
+          <a href="#">About</a>
+
+          <!-- <a href="#">Faq</a> -->
+
+          <a href="#contact">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Company Name © 2019</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>New Delhi</span></p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:9643676113" style="color: #ffffff">9643676113</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+          euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="newContent.js"></script>
+  </body>
+</html>
