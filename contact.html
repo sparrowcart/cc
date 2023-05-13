@@ -57,40 +57,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+ 
     <link href="css/templatemo-nomad-force.css" rel="stylesheet" />
     <link rel="icon" href="" type="image/x-icon" />
 
+  
     <style>
-      .box {
-        border: 2px solid black;
-        padding: 20px;
-        font-size: 15px;
-        font-weight: 600;
-      }
-      #form input,
-      textarea {
-        margin: 20px;
-        width: 80%;
-
-        border: 1px solid #3f4e4f;
-      }
-      #form input {
-        border: 1px solid #3f4e4f;
-        height: 30px;
-        padding: 10px;
-      }
-      .btn {
-        padding: 10px;
-        border-radius: 10px;
-        width: 100%;
-        background-color: lightcoral;
-      }
+      
     </style>
+
   </head>
 
   <body>
-    <main>
+    <main class="contact-bg">
       <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
           <a class="navbar-brand" href="http://creativecodecorner.com/">
@@ -136,45 +117,97 @@
         </div>
       </nav>
 
-      <div class="container">
-        <div class="box">
-          <form id="form" onsubmit="sendEmail(); return false;">
-            Name:
-            <input type="text" name="name" id="name" placeholder="Enter your name" /><br />
-            Contact:
-            <input type="number" name="contact" id="contact" placeholder="Enter your contact" /><br />
-            Email:
-            <input type="email" name="email" id="email" placeholder="Enter your email" /><br />
-            Message:
-            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter the message"></textarea>
-            <button type="submit" class="btn">Send</button>
-          </form>
-        </div>
-      </div>
-      
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      
-      <script>
-        function sendEmail() {
-          const name = document.getElementById("name").value;
-          const contact = document.getElementById("contact").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("msg").value;
-      
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "infosainibross@gmail.com",
-            Password: "511055F4C3B800165AB4A0B9AEACE8394FDC",
-            To: "sainikrishna434@gmail.com",
-            From: email,
-            Subject: "New Message from " + name,
-            Body: `Name: ${name}<br>Contact: ${contact}<br>Email: ${email}<br>Message: ${message}`,
-          }).then((message) => alert("Email sent successfully"));
-        }
-      </script>
-      
-    </main>
+    
+<form class="form-container">
+  <h1 class="getint">Get in touch <i class="fa-solid fa-paper-plane"></i></h1>
+  <div class="form-group">
+    <label for="name"> <i class="fas fa-id-card"></i> Name:</label>
+    <input type="text" id="name" name="name" class="form-control" required>
+  </div>
 
+  <div class="form-group">
+    <label for="email"> <i class="fa-sharp fa-solid fa-envelope"></i> Email:</label>
+    <input type="email" id="email" name="email" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone"><i class="fa-solid fa-mobile-button"></i> Mobile:</label>
+    <input type="tel" id="phone" name="phone" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="service"> <i class="fa-solid fa-building"></i>  Service:<i class="fa-solid fa-caret-down"></i></label>
+    <select id="service" name="service" class="form-control" required>
+      <option value="">Select a service </option>
+      <option value="Webdesign and Developemnt">Webdesign and Developemnt</option>
+      <option value="E-commerce Development">E-commerce Development</option>
+      <option value="Software Development">Software Development</option>
+      <option value="Search Engine Optimization">Search Engine Optimization</option>
+      <option value="Digital Marketing">Digital Marketing</option>
+      <option value="Market Research">Market Research</option>
+      <option value="Custom Development">Custom Development</option>
+      <option value="Not Sure Yet">Not Sure Yet</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Comment or Message:</label>
+    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" onclick="sendEmail(); return false;">Submit</button>
+</form>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  // JavaScript function to send email using SMTPJS with Elastic Email
+  function sendEmail() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const service = document.getElementById("service");
+    const message = document.getElementById("message");
+
+    const body = `
+      Name: ${name.value}\n
+      Email: ${email.value}\n
+      Phone: ${phone.value}\n
+      Service: ${service.value}\n
+      Message: ${message.value}\n
+    `;
+
+    Email.send({
+      To: "creativecodecorner@gmail.com",
+      From: "infosainibross@gmail.com",
+      Subject: `New inquiry for ${service.value}`,
+      Body: body,
+      Host: "smtp.elasticemail.com",
+      Username: "infosainibross@gmail.com",
+      Password: "511055F4C3B800165AB4A0B9AEACE8394FDC",
+      Port: 2525,
+      TLS: {ciphers: "SSLv3"}
+    }).then(
+      message => alert("Email sent successfully!")
+    );
+
+    // Clear form inputs after sending email
+    name.value = "";
+    email.value = "";
+    phone.value = "";
+    service.value = "";
+    message.value = "";
+  }
+</script>
+
+
+    </main>
+<section>
+  <div class="container-fluid" >
+    <div class="row">
+      <img class="lt-svg" src="21-bl.svg" alt="">
+    </div>
+  </div>
+</section>
     <footer class="footer-distributed">
       <div class="footer-left">
         <img src="bglogo1.png" class="logo-1" alt="" srcset="" />
@@ -190,10 +223,10 @@
 
           <!-- <a href="#">Faq</a> -->
 
-          <a href="#contact">Contact</a>
+          <a href="https://creativecodecorner.com/contact">Contact</a>
         </p>
 
-        <p class="footer-company-name">Company Name © 2019</p>
+        <p class="footer-company-name" style="color: #ffffff;">© 2019 CreativeCodeCorner | All rights reserved.</p>
       </div>
 
       <div class="footer-center">
@@ -209,25 +242,26 @@
 
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">support@company.com</a></p>
+          <p><a href="mailto:creativecodecorner@gmail.com">creativecodecorner@gmail.com</a></p>
         </div>
       </div>
 
       <div class="footer-right">
         <p class="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-          euismod convallis velit, eu auctor lacus vehicula sit amet.
+          CreativeCodeCorner, is a professional web designing company based in Bangalore, started in the year 2019 with a mission to provide high quality, responsive & cost effective web designing services
         </p>
 
         <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <!-- <a href="#"><i class="fa fa-github"></i></a> -->
         </div>
       </div>
     </footer>
+
+   
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
