@@ -158,46 +158,6 @@
   <button type="submit" class="btn btn-primary" onclick="sendEmail(); return false;">Submit</button>
 </form>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-  // JavaScript function to send email using SMTPJS with Elastic Email
-  function sendEmail() {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const service = document.getElementById("service");
-    const message = document.getElementById("message");
-
-    const body = `
-      Name: ${name.value}\n
-      Email: ${email.value}\n
-      Phone: ${phone.value}\n
-      Service: ${service.value}\n
-      Message: ${message.value}\n
-    `;
-
-    Email.send({
-      To: "creativecodecorner@gmail.com",
-      From: "infosainibross@gmail.com",
-      Subject: `New inquiry for ${service.value}`,
-      Body: body,
-      Host: "smtp.elasticemail.com",
-      Username: "infosainibross@gmail.com",
-      Password: "511055F4C3B800165AB4A0B9AEACE8394FDC",
-      Port: 2525,
-      TLS: {ciphers: "SSLv3"}
-    }).then(
-      message => alert("Email sent successfully!")
-    );
-
-    // Clear form inputs after sending email
-    name.value = "";
-    email.value = "";
-    phone.value = "";
-    service.value = "";
-    message.value = "";
-  }
-</script>
 
 
     </main>
@@ -261,7 +221,48 @@
       </div>
     </footer>
 
-   
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  // JavaScript function to send email using SMTPJS with Elastic Email
+  function sendEmail() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const service = document.getElementById("service");
+    const message = document.getElementById("message");
+
+    const body = `
+      Name: ${name.value}\n
+      Email: ${email.value}\n
+      Phone: ${phone.value}\n
+      Service: ${service.value}\n
+      Message: ${message.value}\n
+    `;
+
+    Email.send({
+      To: "creativecodecorner@gmail.com",
+      From: "infosainibross@gmail.com",
+      Subject: `New inquiry for ${service.value}`,
+      Body: body,
+      Host: "smtp.elasticemail.com",
+      Username: "infosainibross@gmail.com",
+      Password: "511055F4C3B800165AB4A0B9AEACE8394FDC",
+      Port: 2525,
+      TLS: {ciphers: "SSLv3"}
+    }).then(
+      message => alert("Email sent successfully!")
+    );
+
+    // Clear form inputs after sending email
+    name.value = "";
+    email.value = "";
+    phone.value = "";
+    service.value = "";
+    message.value = "";
+  }
+</script>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
